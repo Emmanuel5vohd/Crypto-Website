@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS Link For Media Query -->
+    <link rel="stylesheet" href="stylemediaquery.css" />
+    <!-- Javascript File -->
+    <script type="module" src="./script.js" defer></script>
+    <!-- Title -->
+    <title>BitShow | Crypto Prices, Clean & Simple</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./favicon/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR SECTION -->
+    <div class="nav-bar" id="navigation">
+      <!-- Header Logo -->
+      <div class="logo">
+        <img src="./icons/logo.png" alt="" />
+        <a href="#"><h1>BitShow</h1></a>
+      </div>
+      <!-- Header Toggle -->
+      <div class="toggle">
+        <img src="./icons/lightmode.png" alt="" id="lightmode" />
+        <img
+          src="./icons/darkmode.png"
+          alt=""
+          id="darkmode"
+          style="display: none"
+        />
+      </div>
+    </div>
+    <!-- HERO SECTION -->
+    <div class="hero-section">
+      <div class="left-side-hero">
+        <h1>Track <span>Real-Time</span> Crypto Prices</h1>
+        <p>
+          Stay up to date on the crypto market with live price updates for top
+          cryptocurrencies like Bitcoin and more.
+        </p>
+        <div class="left-side-hero-btn">
+          <button>
+            <ion-icon name="stats-chart"></ion-icon
+            ><a href="#marketUpdate">View Prices</a>
+          </button>
+          <button class="aboutus-btn">
+            <ion-icon name="person"></ion-icon><a href="#aboutUs">About Us</a>
+          </button>
+        </div>
+      </div>
+      <div class="right-side-hero"><div class="hero-img"></div></div>
+    </div>
+    <!-- MARKET SECTION -->
+    <div class="market-section">
+      <!-- PRICE DISPLAY AREA -->
+      <div class="market-display">
+        <!-- Individual Coin Display (Bitcoin)-->
+        <div class="market-display-div">
+          <div class="coin-id">
+            <img src="./icons/01bitcoin.svg" alt="" class="coin-img" />
+            <h1>Bitcoin</h1>
+            <p>BTC/USD</p>
+          </div>
+          <div class="price-id">
+            <h1>USD <span class="coin-price bitcoinPrice">000</span></h1>
+          </div>
+          <div class="percentage-id">
+            <h1 class="coinPercentageNumber" id="bitcoinPercentageNumber">
+              000
+            </h1>
+            <p class="coinPercentage bitcoinPercentage">
+              <span class="coinPercentageValue bitcoinPercentageValue">0</span>%
+            </p>
+          </div>
+        </div>
+        <!-- Individual Coin Display (Ethereum)-->
+        <div class="market-display-div market-display-div-eth">
+          <div class="coin-id">
+            <img src="./icons/02Ethereum.svg" alt="" class="coin-img" />
+            <h1>Ethereum</h1>
+            <p>ETH/USD</p>
+          </div>
+          <div class="price-id">
+            <h1>USD <span class="coin-price ethPrice">000</span></h1>
+          </div>
+          <div class="percentage-id">
+            <h1 class="coinPercentageNumber" id="ethPercentageNumber">000</h1>
+            <p class="coinPercentage ethPercentage">
+              <span class="coinPercentageValue ethPercentageValue">0</span>%
+            </p>
+          </div>
+        </div>
+        <!-- Individual Coin Display (Solana)-->
+        <div class="market-display-div">
+          <div class="coin-id">
+            <img src="./icons/05Solana.svg" alt="" class="coin-img" />
+            <h1>Solana</h1>
+            <p>SOL/USD</p>
+          </div>
+          <div class="price-id">
+            <h1>USD <span class="coin-price solanaPrice">000</span></h1>
+          </div>
+          <div class="percentage-id">
+            <h1 class="coinPercentageNumber" id="solanaPercentageNumber">
+              000
+            </h1>
+            <p class="coinPercentage solanaPercentage">
+              <span class="coinPercentageValue solanaPercentageValue">0</span>%
+            </p>
+          </div>
+        </div>
+        <!-- Individual Coin Display (Binance Coin)-->
+        <div class="market-display-div">
+          <div class="coin-id">
+            <img src="./icons/04BNB.svg" alt="" class="coin-img" />
+            <h1>BNB</h1>
+            <p>BNB/USD</p>
+          </div>
+          <div class="price-id">
+            <h1>USD <span class="coin-price bnbPrice">000</span></h1>
+          </div>
+          <div class="percentage-id">
+            <h1 class="coinPercentageNumber" id="bnbPercentageNumber">000</h1>
+            <p class="coinPercentage bnbPercentage">
+              <span class="coinPercentageValue bnbPercentageValue">0</span>%
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- MARKET PRICE TABLE -->
+      <div class="market-update" id="marketUpdate">
+        <!-- Market Price Heading -->
+        <h1 class="minor-h1">Market <span>Update</span></h1>
+        <!-- Market Price Table -->
+        <table class="market-price-full-table">
+          <!-- Table Heading -->
+          <thead>
+            <tr class="market-price-table">
+              <th><h1>#</h1></th>
+              <th><h1>Name</h1></th>
+              <th><h1>Current Price</h1></th>
+              <th><h1>24h (%)</h1></th>
+              <th><h1>Market Cap</h1></th>
+              <th><h1>24h (Chart)</h1></th>
+              <th><h1>External Link</h1></th>
+            </tr>
+          </thead>
+          <!-- Table Body -->
+          <tbody>
+            <!-- Bitcoin Table -->
+            <tr class="market-price-item">
+              <td><h1>1.</h1></td>
+              <td>
+                <div class="coin-id">
+                  <img src="./icons/01bitcoin.svg" alt="" class="coin-img" />
+                  <h1>Bitcoin</h1>
+                  <p>BTC</p>
+                </div>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>
+                    $<span class="coin-price bitcoinPriceTable">000</span>
+                  </h1>
+                </div>
+              </td>
+              <td>
+                <p class="bitcoinPercentageTable">
+                  <span
+                    class="coinPercentageValueTable bitcoinPercentageValueTable"
+                    >0</span
+                  >%
+                </p>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price bitcoinMarketCap">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <img
+                  src="./icons/chart-1.svg"
+                  alt=""
+                  class="bitcoin-chart-up"
+                  style="display: none"
+                />
+                <img
+                  src="./icons/chart-2.svg"
+                  alt=""
+                  class="bitcoin-chart-down"
+                  style="display: none"
+                />
+              </td>
+              <td>
+                <p class="relink">
+                  <a
+                    href="https://www.coingecko.com/en/coins/bitcoin"
+                    target="_blank"
+                    title="Redirect to Coingecko Site"
+                    >Read More</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- Ethereum Table -->
+            <tr class="market-price-item">
+              <td><h1>2.</h1></td>
+              <td>
+                <div class="coin-id">
+                  <img src="./icons/02Ethereum.svg" alt="" class="coin-img" />
+                  <h1>Ethereum</h1>
+                  <p>ETH</p>
+                </div>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price ethPriceTable">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <p class="ethPercentageTable">
+                  <span class="coinPercentageValueTable ethPercentageValueTable"
+                    >0</span
+                  >%
+                </p>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price ethMarketCap">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <img
+                  src="./icons/chart-1.svg"
+                  alt=""
+                  class="eth-chart-up"
+                  style="display: none"
+                />
+                <img
+                  src="./icons/chart-2.svg"
+                  alt=""
+                  class="eth-chart-down"
+                  style="display: none"
+                />
+              </td>
+              <td>
+                <p class="relink">
+                  <a
+                    href="https://www.coingecko.com/en/coins/ethereum"
+                    target="_blank"
+                    title="Redirect to Coingecko Site"
+                    >Read More</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- XRP Table -->
+            <tr class="market-price-item">
+              <td><h1>3.</h1></td>
+              <td>
+                <div class="coin-id">
+                  <img
+                    src="./icons/06XRP.svg"
+                    alt=""
+                    class="coin-img"
+                    style="background-color: #ffff"
+                  />
+                  <h1>Ripple</h1>
+                  <p>XRP</p>
+                </div>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price xrpPriceTable">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <p class="xrpPercentageTable">
+                  <span class="coinPercentageValueTable xrpPercentageValueTable"
+                    >0</span
+                  >%
+                </p>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price xrpMarketCap">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <img
+                  src="./icons/chart-1.svg"
+                  alt=""
+                  class="xrp-chart-up"
+                  style="display: none"
+                />
+                <img
+                  src="./icons/chart-2.svg"
+                  alt=""
+                  class="xrp-chart-down"
+                  style="display: none"
+                />
+              </td>
+              <td>
+                <p class="relink">
+                  <a
+                    href="https://www.coingecko.com/en/coins/xrp"
+                    target="_blank"
+                    title="Redirect to Coingecko Site"
+                    >Read More</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- Tether Table -->
+            <tr class="market-price-item">
+              <td><h1>4.</h1></td>
+              <td>
+                <div class="coin-id">
+                  <img src="./icons/03Tether.svg" alt="" class="coin-img" />
+                  <h1>Tether</h1>
+                  <p>USDT</p>
+                </div>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price tetherPriceTable">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <p class="tetherPercentageTable">
+                  <span
+                    class="coinPercentageValueTable tetherPercentageValueTable"
+                    >0</span
+                  >%
+                </p>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price tetherMarketCap">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <img
+                  src="./icons/chart-1.svg"
+                  alt=""
+                  class="tether-chart-up"
+                  style="display: none"
+                />
+                <img
+                  src="./icons/chart-2.svg"
+                  alt=""
+                  class="tether-chart-down"
+                  style="display: none"
+                />
+              </td>
+              <td>
+                <p class="relink">
+                  <a
+                    href="https://www.coingecko.com/en/coins/tether"
+                    target="_blank"
+                    title="Redirect to Coingecko Site"
+                    >Read More</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- BNB Table -->
+            <tr class="market-price-item">
+              <td><h1>5.</h1></td>
+              <td>
+                <div class="coin-id">
+                  <img src="./icons/04BNB.svg" alt="" class="coin-img" />
+                  <h1>Binance Coin</h1>
+                  <p>BNB</p>
+                </div>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price bnbPriceTable">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <p class="bnbPercentageTable">
+                  <span class="coinPercentageValueTable bnbPercentageValueTable"
+                    >0</span
+                  >%
+                </p>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price bnbMarketCap">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <img
+                  src="./icons/chart-1.svg"
+                  alt=""
+                  class="bnb-chart-up"
+                  style="display: none"
+                />
+                <img
+                  src="./icons/chart-2.svg"
+                  alt=""
+                  class="bnb-chart-down"
+                  style="display: none"
+                />
+              </td>
+              <td>
+                <p class="relink">
+                  <a
+                    href="https://www.coingecko.com/en/coins/bnb"
+                    target="_blank"
+                    title="Redirect to Coingecko Site"
+                    >Read More</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- Solana Table -->
+            <tr class="market-price-item">
+              <td><h1>6.</h1></td>
+              <td>
+                <div class="coin-id">
+                  <img src="./icons/05Solana.svg" alt="" class="coin-img" />
+                  <h1>Solana</h1>
+                  <p>SOL</p>
+                </div>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price solanaPriceTable">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <p class="solanaPercentageTable">
+                  <span
+                    class="coinPercentageValueTable solanaPercentageValueTable"
+                    >0</span
+                  >%
+                </p>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price solanaMarketCap">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <img
+                  src="./icons/chart-1.svg"
+                  alt=""
+                  class="solana-chart-up"
+                  style="display: none"
+                />
+                <img
+                  src="./icons/chart-2.svg"
+                  alt=""
+                  class="solana-chart-down"
+                  style="display: none"
+                />
+              </td>
+              <td>
+                <p class="relink">
+                  <a
+                    href="https://www.coingecko.com/en/coins/solana"
+                    target="_blank"
+                    title="Redirect to Coingecko Site"
+                    >Read More</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- Dogecoin Table -->
+            <tr class="market-price-item">
+              <td><h1>7.</h1></td>
+              <td>
+                <div class="coin-id">
+                  <img src="./icons/10Dogecoin.svg" alt="" class="coin-img" />
+                  <h1>Dogecoin</h1>
+                  <p>DOGE</p>
+                </div>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price dogePriceTable">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <p class="dogePercentageTable">
+                  <span
+                    class="coinPercentageValueTable dogePercentageValueTable"
+                    >0</span
+                  >%
+                </p>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price dogeMarketCap">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <img
+                  src="./icons/chart-1.svg"
+                  alt=""
+                  class="doge-chart-up"
+                  style="display: none"
+                />
+                <img
+                  src="./icons/chart-2.svg"
+                  alt=""
+                  class="doge-chart-down"
+                  style="display: none"
+                />
+              </td>
+              <td>
+                <p class="relink">
+                  <a
+                    href="https://www.coingecko.com/en/coins/dogecoin"
+                    target="_blank"
+                    title="Redirect to Coingecko Site"
+                    >Read More</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- Cardano Table -->
+            <tr class="market-price-item">
+              <td><h1>8.</h1></td>
+              <td>
+                <div class="coin-id">
+                  <img
+                    src="./icons/07Cardano.svg"
+                    alt=""
+                    class="coin-img"
+                    style="background-color: #ffff"
+                  />
+                  <h1>Cardano</h1>
+                  <p>ADA</p>
+                </div>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>
+                    $<span class="coin-price cardanoPriceTable">000</span>
+                  </h1>
+                </div>
+              </td>
+              <td>
+                <p class="cardanoPercentageTable">
+                  <span
+                    class="coinPercentageValueTable cardanoPercentageValueTable"
+                    >0</span
+                  >%
+                </p>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price cardanoMarketCap">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <img
+                  src="./icons/chart-1.svg"
+                  alt=""
+                  class="cardano-chart-up"
+                  style="display: none"
+                />
+                <img
+                  src="./icons/chart-2.svg"
+                  alt=""
+                  class="cardano-chart-down"
+                  style="display: none"
+                />
+              </td>
+              <td>
+                <p class="relink">
+                  <a
+                    href="https://www.coingecko.com/en/coins/cardano"
+                    target="_blank"
+                    title="Redirect to Coingecko Site"
+                    >Read More</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- Sui Table -->
+            <tr class="market-price-item">
+              <td><h1>9.</h1></td>
+              <td>
+                <div class="coin-id">
+                  <img src="./icons/09Sui.svg" alt="" class="coin-img" />
+                  <h1>Sui</h1>
+                  <p>SUI</p>
+                </div>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price suiPriceTable">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <p class="suiPercentageTable">
+                  <span class="coinPercentageValueTable suiPercentageValueTable"
+                    >0</span
+                  >%
+                </p>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price suiMarketCap">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <img
+                  src="./icons/chart-1.svg"
+                  alt=""
+                  class="sui-chart-up"
+                  style="display: none"
+                />
+                <img
+                  src="./icons/chart-2.svg"
+                  alt=""
+                  class="sui-chart-down"
+                  style="display: none"
+                />
+              </td>
+              <td>
+                <p class="relink">
+                  <a
+                    href="https://www.coingecko.com/en/coins/sui"
+                    target="_blank"
+                    title="Redirect to Coingecko Site"
+                    >Read More</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- Avalance Table -->
+            <tr class="market-price-item">
+              <td><h1>10.</h1></td>
+              <td>
+                <div class="coin-id">
+                  <img src="./icons/08Avalanche.svg" alt="" class="coin-img" />
+                  <h1>Avalanche</h1>
+                  <p>AVAX</p>
+                </div>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price avaxPriceTable">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <p class="avaxPercentageTable">
+                  <span
+                    class="coinPercentageValueTable avaxPercentageValueTable"
+                    >0</span
+                  >%
+                </p>
+              </td>
+              <td>
+                <div class="price-id">
+                  <h1>$<span class="coin-price avaxMarketCap">000</span></h1>
+                </div>
+              </td>
+              <td>
+                <img
+                  src="./icons/chart-1.svg"
+                  alt=""
+                  class="avax-chart-up"
+                  style="display: none"
+                />
+                <img
+                  src="./icons/chart-2.svg"
+                  alt=""
+                  class="avax-chart-down"
+                  style="display: none"
+                />
+              </td>
+              <td>
+                <p class="relink">
+                  <a
+                    href="https://www.coingecko.com/en/coins/avalanche"
+                    target="_blank"
+                    title="Redirect to Coingecko Site"
+                    >Read More</a
+                  >
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- ABOUT US SECTION -->
+    <div class="about-us" id="aboutUs">
+      <div class="about-us-left-side">
+        <div class="about-us-left-side-inner"></div>
+      </div>
+      <div class="about-us-right-side">
+        <h1 class="about-us-h1-1">About <span>Us</span></h1>
+        <h1 class="about-us-h1-2">
+          Track Real-Time <span>Crypto Prices</span> Instantly.
+        </h1>
+        <p>
+          We bring together all the current prices of 10 very popular crypto
+          coins. All the right information is here!
+        </p>
+        <h1 class="about-us-h1-3">
+          <span>|</span>Your Daily Dose of Crypto Indexes.
+        </h1>
+        <h1 class="about-us-h1-3 highlight-about-us">
+          <span>|</span> Know Your Coins, Make Smart Moves.
+        </h1>
+        <h1 class="about-us-h1-3">
+          <span>|</span> Crypto Prices, Clean & Simple.
+        </h1>
+      </div>
+    </div>
+    <!-- WHY US SECTION -->
+    <div class="why-us" id="whyUs">
+      <!-- Why us Heading Content -->
+      <div class="why-us-heading">
+        <h1 class="minor-h1">Why <span>Choose</span> Us?</h1>
+        <p>
+          Stay updated with real-time prices of 10 top cryptocurrencies -- all
+          the essential info in one place.
+        </p>
+      </div>
+      <!-- Why us Content -->
+      <div class="why-us-content-div">
+        <div class="why-us-content">
+          <img src="./images/why-us1.png" alt="" />
+          <h1>Smarter <span>Trades</span></h1>
+          <p>
+            Increase your profits by spotting market trends early and making
+            informed trading decisions.
+          </p>
+        </div>
+        <div class="why-us-content why-us-highlight">
+          <img src="./images/why-us2.png" alt="" />
+          <h1>Earn More <span>Money</span></h1>
+          <p>
+            Make x10 by knowing when to buy and sell assests depending on the
+            market conditions.
+          </p>
+        </div>
+        <div class="why-us-content">
+          <img src="./images/why-us3.png" alt="" />
+          <h1>Better <span>Portfolio</span></h1>
+          <p>
+            Build a stronger portfolio by tracking top-performing coins and
+            balancing your assets wisely.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- SLIDER SECTION -->
+    <div class="slider">
+      <!-- Bitcoin Slider -->
+      <div class="slider-content slidercontent1">
+        <img src="./icons/01bitcoin.svg" alt="" />
+        <!-- <h1 class="sliderName">Bitcoin</h1> -->
+        <h1 class="slider-h1-1">BTC</h1>
+      </div>
+      <!-- Ethereum Slider -->
+      <div class="slider-content slidercontent2">
+        <img src="./icons/02Ethereum.svg" alt="" />
+        <!-- <h1 class="sliderName">Ethereum</h1> -->
+        <h1 class="slider-h1-1">ETH</h1>
+      </div>
+      <!-- Ripple Slider -->
+      <div class="slider-content slidercontent3">
+        <img src="./icons/06XRP.svg" alt="" />
+        <!-- <h1 class="sliderName">Ripple</h1> -->
+        <h1 class="slider-h1-1">XRP</h1>
+      </div>
+      <!-- Tether Slider -->
+      <div class="slider-content slidercontent4">
+        <img src="./icons/03Tether.svg" alt="" />
+        <!-- <h1 class="sliderName">Tether</h1> -->
+        <h1 class="slider-h1-1">USDT</h1>
+      </div>
+      <!-- Binance Coin Slider -->
+      <div class="slider-content slidercontent5">
+        <img src="./icons/04BNB.svg" alt="" />
+        <!-- <h1 class="sliderName">Binancecoin</h1> -->
+        <h1 class="slider-h1-1">BNB</h1>
+      </div>
+      <!-- Solana Slider -->
+      <div class="slider-content slidercontent6">
+        <img src="./icons/05Solana.svg" alt="" />
+        <!-- <h1 class="sliderName">Solana</h1> -->
+        <h1 class="slider-h1-1">SOL</h1>
+      </div>
+      <!-- Dogecoin Slider -->
+      <div class="slider-content slidercontent7">
+        <img src="./icons/10Dogecoin.svg" alt="" />
+        <!-- <h1 class="sliderName">Dogecoin</h1> -->
+        <h1 class="slider-h1-1">DOGE</h1>
+      </div>
+      <!-- Cardano Slider -->
+      <div class="slider-content slidercontent8">
+        <img src="./icons/07Cardano.svg" alt="" />
+        <!-- <h1 class="sliderName">Cardano</h1> -->
+        <h1 class="slider-h1-1">ADA</h1>
+      </div>
+      <!-- Sui Slider -->
+      <div class="slider-content slidercontent9">
+        <img src="./icons/09Sui.svg" alt="" />
+        <!-- <h1 class="sliderName">Sui</h1> -->
+        <h1 class="slider-h1-1">SUI</h1>
+      </div>
+      <!-- Avalanche Slider -->
+      <div class="slider-content slidercontent10">
+        <img src="./icons/08Avalanche.svg" alt="" />
+        <!-- <h1 class="sliderName">Avalanche</h1> -->
+        <h1 class="slider-h1-1">AVAX</h1>
+      </div>
+    </div>
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="footer-1">
+        <a
+          href="https://www.facebook.com/profile.php?id=100033228874014"
+          target="_blank"
+          title="Redirect to Facebook"
+          ><ion-icon name="logo-facebook"></ion-icon></a
+        ><a
+          href="https://x.com/Emmanue46412252"
+          target="_blank"
+          title="Redirect to X"
+          ><ion-icon name="logo-twitter"></ion-icon></a
+        ><a
+          href="https://www.instagram.com/emmanuel.moses.5vo.hd/"
+          target="_blank"
+          title="Redirect to Instagram"
+          ><ion-icon name="logo-instagram"></ion-icon
+        ></a>
+        <a
+          href="https://github.com/Emmanuel5vohd"
+          target="_blank"
+          title="Redirect to Github"
+          ><ion-icon name="logo-github"></ion-icon
+        ></a>
+      </div>
+      <div class="footer-2">
+        <h1>Copyright</h1>
+        <p>&copy;2025</p>
+        <h1>Emmanuel Moses. All rights reserved.</h1>
+      </div>
+      <div class="footer-3">
+        <a href="#">
+          <ion-icon name="arrow-up-outline"></ion-icon>
+          <h1>Back To Top</h1></a
+        >
+      </div>
+    </footer>
+    <!-- Ion Icons Script -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
