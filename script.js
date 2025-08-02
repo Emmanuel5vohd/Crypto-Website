@@ -32,9 +32,6 @@ let ethChartDown = document.querySelector(".eth-chart-down");
 // 3. XRPCoin Elements
 let xrpPriceTable = document.querySelector(".xrpPriceTable");
 let xrpPercentageTable = document.querySelector(".xrpPercentageTable");
-let xrpPercentageValueTable = document.querySelector(
-  ".xrpPercentageValueTable"
-);
 let xrpMarketCap = document.querySelector(".xrpMarketCap");
 let xrpChartUp = document.querySelector(".xrp-chart-up");
 let xrpChartDown = document.querySelector(".xrp-chart-down");
@@ -42,9 +39,6 @@ let xrpChartDown = document.querySelector(".xrp-chart-down");
 // 4. TetherCoin Elements
 let tetherPriceTable = document.querySelector(".tetherPriceTable");
 let tetherPercentageTable = document.querySelector(".tetherPercentageTable");
-let tetherPercentageValueTable = document.querySelector(
-  ".tetherPercentageValueTable"
-);
 let tetherMarketCap = document.querySelector(".tetherMarketCap");
 let tetherChartUp = document.querySelector(".tether-chart-up");
 let tetherChartDown = document.querySelector(".tether-chart-down");
@@ -80,9 +74,6 @@ let solanaChartDown = document.querySelector(".solana-chart-down");
 // 7. DogeCoin Elements
 let dogePriceTable = document.querySelector(".dogePriceTable");
 let dogePercentageTable = document.querySelector(".dogePercentageTable");
-let dogePercentageValueTable = document.querySelector(
-  ".dogePercentageValueTable"
-);
 let dogeMarketCap = document.querySelector(".dogeMarketCap");
 let dogeChartUp = document.querySelector(".doge-chart-up");
 let dogeChartDown = document.querySelector(".doge-chart-down");
@@ -90,9 +81,6 @@ let dogeChartDown = document.querySelector(".doge-chart-down");
 // 8. CardanoCoin Elements
 let cardanoPriceTable = document.querySelector(".cardanoPriceTable");
 let cardanoPercentageTable = document.querySelector(".cardanoPercentageTable");
-let cardanoPercentageValueTable = document.querySelector(
-  ".cardanoPercentageValueTable"
-);
 let cardanoMarketCap = document.querySelector(".cardanoMarketCap");
 let cardanoChartUp = document.querySelector(".cardano-chart-up");
 let cardanoChartDown = document.querySelector(".cardano-chart-down");
@@ -100,9 +88,6 @@ let cardanoChartDown = document.querySelector(".cardano-chart-down");
 // 9. SuiCoin Elements
 let suiPriceTable = document.querySelector(".suiPriceTable");
 let suiPercentageTable = document.querySelector(".suiPercentageTable");
-let suiPercentageValueTable = document.querySelector(
-  ".suiPercentageValueTable"
-);
 let suiMarketCap = document.querySelector(".suiMarketCap");
 let suiChartUp = document.querySelector(".sui-chart-up");
 let suiChartDown = document.querySelector(".sui-chart-down");
@@ -110,9 +95,6 @@ let suiChartDown = document.querySelector(".sui-chart-down");
 // 10. AvalancheCoin Elements
 let avaxPriceTable = document.querySelector(".avaxPriceTable");
 let avaxPercentageTable = document.querySelector(".avaxPercentageTable");
-let avaxPercentageValueTable = document.querySelector(
-  ".avaxPercentageValueTable"
-);
 let avaxMarketCap = document.querySelector(".avaxMarketCap");
 let avaxChartUp = document.querySelector(".avax-chart-up");
 let avaxChartDown = document.querySelector(".avax-chart-down");
@@ -210,7 +192,7 @@ function bitcoinDisplayDOM() {
   bitcoinPercentageValueTable.textContent = currencyToDecimal(
     bitcoinArray.price_change_percentage_24h
   );
-  if (bitcoinPercentageValueTable.textContent <= 0) {
+  if (bitcoinPercentageValueTable.textContent < 0.0) {
     bitcoinPercentageTable.style.color = "rgb(211, 54, 54)";
     bitcoinChartDown.style.display = "block";
   } else {
@@ -236,7 +218,7 @@ function ethDisplayDOM() {
   ethPercentageValueTable.textContent = currencyToDecimal(
     ethArray.price_change_percentage_24h
   );
-  if (ethPercentageValueTable.textContent <= 0) {
+  if (ethPercentageValueTable.textContent < 0.0) {
     ethPercentageTable.style.color = "rgb(211, 54, 54)";
     ethChartDown.style.display = "block";
   } else {
@@ -252,7 +234,7 @@ function xrpDisplayDOM() {
   xrpPercentageTable.textContent = currencyToDecimal(
     rippleArray.price_change_percentage_24h
   );
-  if (xrpPercentageValueTable.textContent <= 0) {
+  if (xrpPercentageTable.textContent < 0.0) {
     xrpPercentageTable.style.color = "rgb(211, 54, 54)";
     xrpChartDown.style.display = "block";
   } else {
@@ -268,7 +250,7 @@ function tetherDisplayDOM() {
   tetherPercentageTable.textContent = currencyToDecimal(
     tetherArray.price_change_percentage_24h
   );
-  if (tetherPercentageValueTable.textContent <= 0) {
+  if (tetherPercentageTable.textContent < 0.0) {
     tetherPercentageTable.style.color = "rgb(211, 54, 54)";
     tetherChartDown.style.display = "block";
   } else {
@@ -294,7 +276,7 @@ function bnbDisplayDOM() {
   bnbPercentageValueTable.textContent = currencyToDecimal(
     bnbArray.price_change_percentage_24h
   );
-  if (bnbPercentageValueTable.textContent <= 0) {
+  if (bnbPercentageValueTable.textContent < 0.0) {
     bnbPercentageTable.style.color = "rgb(211, 54, 54)";
     bnbChartDown.style.display = "block";
   } else if (bnbPercentageValueTable.textContent > 0) {
@@ -320,7 +302,7 @@ function solanaDisplayDOM() {
   solanaPercentageValueTable.textContent = currencyToDecimal(
     solanaArray.price_change_percentage_24h
   );
-  if (solanaPercentageValueTable.textContent <= 0) {
+  if (solanaPercentageValueTable.textContent < 0.0) {
     solanaPercentageTable.style.color = "rgb(211, 54, 54)";
     solanaChartDown.style.display = "block";
   } else {
@@ -336,7 +318,7 @@ function dogecoinDisplayDOM() {
   dogePercentageTable.textContent = currencyToDecimal(
     dogecoinArray.price_change_percentage_24h
   );
-  if (dogePercentageValueTable.textContent <= 0) {
+  if (dogePercentageTable.textContent < 0.0) {
     dogePercentageTable.style.color = "rgb(211, 54, 54)";
     dogeChartDown.style.display = "block";
   } else {
@@ -352,7 +334,7 @@ function cardanoDisplayDOM() {
   cardanoPercentageTable.textContent = currencyToDecimal(
     cardanoArray.price_change_percentage_24h
   );
-  if (cardanoPercentageValueTable.textContent <= 0) {
+  if (cardanoPercentageTable.textContent < 0.0) {
     cardanoPercentageTable.style.color = "rgb(211, 54, 54)";
     cardanoChartDown.style.display = "block";
   } else {
@@ -368,7 +350,7 @@ function suiDisplayDOM() {
   suiPercentageTable.textContent = currencyToDecimal(
     suiArray.price_change_percentage_24h
   );
-  if (suiPercentageValueTable.textContent <= 0) {
+  if (suiPercentageTable.textContent < 0.0) {
     suiPercentageTable.style.color = "rgb(211, 54, 54)";
     suiChartDown.style.display = "block";
   } else {
@@ -384,7 +366,7 @@ function avalancheDisplayDOM() {
   avaxPercentageTable.textContent = currencyToDecimal(
     avalancheArray.price_change_percentage_24h
   );
-  if (avaxPercentageValueTable.textContent <= 0) {
+  if (avaxPercentageTable.textContent < 0.0) {
     avaxPercentageTable.style.color = "rgb(211, 54, 54)";
     avaxChartDown.style.display = "block";
   } else {
