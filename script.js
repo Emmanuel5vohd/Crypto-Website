@@ -410,8 +410,7 @@ darkMode.addEventListener("click", () => {
 });
 
 // Import Element To Be Animated!
-const image = document.querySelector(".market-display");
-const image2 = document.querySelector(".market-price-full-table");
+const marketDisplay = document.querySelector(".market-display");
 
 // Animation Function
 const newViewportAnimation = new IntersectionObserver(
@@ -429,25 +428,24 @@ const newViewportAnimation = new IntersectionObserver(
 );
 
 // Pass in the the imported element name as your argument
-newViewportAnimation.observe(image);
-// newViewportAnimation.observe(image2);
+newViewportAnimation.observe(marketDisplay);
 
 // METHOD 2 for Intersection Observer Function
 // Import multiple HTML elements to JavaScript
-const images = document.querySelectorAll(".fade-in");
+// const images = document.querySelectorAll(".fade-in");
 
 // Declare a function
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      } else {
-        entry.target.classList.remove("active");
-      }
-    });
-  },
-  { threshold: 0.5 }
-);
+// const observer = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add("active");
+//       } else {
+//         entry.target.classList.remove("active");
+//       }
+//     });
+//   },
+//   { threshold: 0.5 }
+// );
 
-images.forEach((img) => observer.observe(img));
+// images.forEach((img) => observer.observe(img));
